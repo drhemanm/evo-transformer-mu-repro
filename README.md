@@ -18,8 +18,7 @@ pip install -r requirements.txt
 # Pretrain (MLM) on WikiText-2
 python train.py --dataset wikitext --subset wikitext-2-raw-v1 --seq_len 512 --epochs 3 --save ckpt/evo_small.pt --seed 42
 
-# Fine-tune on PIQA
 python finetune.py --task piqa --seq_len 256 --epochs 3 --ckpt ckpt/evo_small.pt --seed 42
 
-# Fine-tune on HellaSwag
 python finetune.py --task hellaswag --seq_len 256 --epochs 3 --ckpt ckpt/evo_small.pt --seed 42
+
