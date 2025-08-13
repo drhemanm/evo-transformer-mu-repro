@@ -63,8 +63,30 @@ All datasets are public and loaded from [HuggingFace Datasets](https://huggingfa
 
 *(Results will vary slightly depending on seed and hardware.)*
 
----
-
 ## Reproducibility
 
-### Seeds
+ ##seeds
+ 13
+ 21
+ 42
+
+
+
+### Run Commands
+```bash
+pip install -r requirements.txt
+
+# Pretrain
+python train.py --dataset wikitext --subset wikitext-2-raw-v1 --seq_len 512 --epochs 3 --save ckpt/evo_small.pt --seed 42
+
+# Fine-tune (PIQA)
+python finetune.py --task piqa --seq_len 256 --epochs 3 --ckpt ckpt/evo_small.pt --seed 42
+
+# Fine-tune (HellaSwag)
+python finetune.py --task hellaswag --seq_len 256 --epochs 3 --ckpt ckpt/evo_small.pt --seed 42
+
+
+---
+
+Mohabeer, H. (2025). EvoTransformer: A Whitepaper on Evolving Neural Architectures for Open-Ended AI (Version V1). Zenodo. https://doi.org/10.5281/zenodo.16833210
+
