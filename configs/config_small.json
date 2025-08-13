@@ -1,0 +1,17 @@
+{
+  "task": "mlm",
+  "dataset": "wikitext",
+  "subset": "wikitext-2-raw-v1",
+  "seq_len": 512,
+  "genome": {
+    "d_model": 384,
+    "n_layers": 6,
+    "n_heads": 6,
+    "ffn_mult": 4.0,
+    "dropout": 0.1
+  },
+  "lr": 0.002,
+  "epochs": 3,
+  "batch_size": 8,
+  "seed": 42
+}
